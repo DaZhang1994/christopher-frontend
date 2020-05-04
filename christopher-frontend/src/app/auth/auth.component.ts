@@ -1,13 +1,13 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Apollo } from 'apollo-angular';
 import Base64 from 'crypto-js/enc-base64';
 import HmacSHA256 from 'crypto-js/hmac-sha256';
 import gql from 'graphql-tag';
+import md5 from 'md5';
 import validator from 'validator';
 import { Identifier } from './entities/identifier.entity';
-import md5 from 'md5';
 
 gql`
   input IdentifierInput {
@@ -36,20 +36,12 @@ const Token = gql`
   }
 `;
 
-const User = gql`
-  query user {
-    user {
-      username
-    }
-  }
-`;
-
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.sass'],
 })
-export class AuthComponent implements OnInit, AfterViewInit {
+export class AuthComponent implements OnInit {
   loginForm: FormGroup;
   identifierValidator = (control: AbstractControl) => {
     if (control.value) {
@@ -87,9 +79,7 @@ export class AuthComponent implements OnInit, AfterViewInit {
     return this.loginForm.get('password');
   }
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     this.loginForm.valueChanges.subscribe(() => {
       if (this.unauthorized) {
         this.unauthorized = false;
@@ -134,20 +124,11 @@ export class AuthComponent implements OnInit, AfterViewInit {
           },
         })
         .toPromise();
-
       localStorage.setItem('token', tokenRes.token);
-      console.log('old token: ' + localStorage.getItem('token'));
-
-      const { data: userRes }: any = await this.apollo
-        .query({
-          query: User,
-        })
-        .toPromise();
-
-      console.log(userRes);
-      console.log('new token: ' + localStorage.getItem('token'));
-    } catch (e) {
-      console.log(e);
+      this.loginForm.reset();
+      return this.router.navigate(['']);
+    }
+    catch (e) {
       this.unauthorized = true;
     }
   }

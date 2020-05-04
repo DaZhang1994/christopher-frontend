@@ -24,7 +24,6 @@ const authLink = new ApolloLink((operation, forward) => {
 
 //After the backend responds, we take the refreshToken from headers if it exists, and save it in the cookie.
 const tokenLink = new ApolloLink((operation, forward) => {
-  console.log('hahahahhahahha');
   return forward(operation).map((response) => {
     const context = operation.getContext();
     const {

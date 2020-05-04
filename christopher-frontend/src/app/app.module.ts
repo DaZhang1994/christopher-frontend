@@ -12,7 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { CommonModule } from './common/common.module';
+import { ErrorModule } from './error/error.module';
 import { GraphQLModule } from './graphql.module';
+import { HeaderModule } from './header/header.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +32,8 @@ import { GraphQLModule } from './graphql.module';
     HttpLinkModule,
     AuthModule,
     CommonModule,
+    HeaderModule,
+    ErrorModule
   ],
   providers: [MDBSpinningPreloader, ToastService],
   bootstrap: [AppComponent],

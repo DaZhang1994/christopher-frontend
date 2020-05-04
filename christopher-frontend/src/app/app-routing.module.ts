@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
-
+import { PageNotFound } from './error/page_not_found/page_not_found.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
-  {path: 'auth', component: AuthComponent},
+  {path: '', component: HeaderComponent},
+  {path: 'auth', component: HeaderComponent, children: [
+    {path: '', component: AuthComponent}]
+  },
+  {path: '**', component: HeaderComponent, children: [
+    {path: '', component: PageNotFound}]
+  },
 ];
 
 @NgModule({
