@@ -1,15 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MDBBootstrapModulesPro } from '../../../projects/ng-uikit-pro-standard/src/lib/mdb.module';
+import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { PageNotFound } from './page_not_found/page_not_found.component';
 
 @NgModule({
   declarations: [PageNotFound],
-  imports: [
-    CommonModule,
-    MDBBootstrapModulesPro.forRoot(),
-    RouterModule,
-  ],
+  imports: [CommonModule, RouterModule, MDBBootstrapModulesPro.forRoot()],
 })
-export class ErrorModule { }
+export class ErrorModule {}

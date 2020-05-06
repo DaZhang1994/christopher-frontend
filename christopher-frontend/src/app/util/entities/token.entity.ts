@@ -1,8 +1,7 @@
 import { IsNotEmpty, IsNumber, IsString, Matches } from 'class-validator';
 import { BaseEntity } from './base.entity';
 
-export class Token extends BaseEntity{
-
+export class Token extends BaseEntity {
   @IsString()
   @IsNotEmpty()
   username: string;
@@ -23,5 +22,4 @@ export class Token extends BaseEntity{
   @IsNumber()
   @IsNotEmpty()
   exp: number;
-
 }

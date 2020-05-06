@@ -1,21 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 import { MDBBootstrapModulesPro } from '../../../projects/ng-uikit-pro-standard/src/lib/mdb.module';
 import { UtilModule } from '../util/util.module';
-import { AuthComponent } from './auth.component';
+import { RegisterRoutingModule } from './register-routing.module';
+import { RegisterComponent } from './register.component';
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [RegisterComponent],
   imports: [
-    UtilModule,
+    CommonModule,
+    RegisterRoutingModule,
     MDBBootstrapModulesPro.forRoot(),
     ReactiveFormsModule,
     FormsModule,
-    RouterModule,
-    CommonModule,
+    UtilModule,
   ],
-  providers: [],
 })
-export class AuthModule {}
+export class RegisterModule {}

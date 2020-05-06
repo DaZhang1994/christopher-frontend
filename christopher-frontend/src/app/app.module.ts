@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,10 +12,12 @@ import { MDBSpinningPreloader } from '../../projects/ng-uikit-pro-standard/src/l
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
-import { CommonModule } from './common/common.module';
 import { ErrorModule } from './error/error.module';
 import { GraphQLModule } from './graphql.module';
 import { HeaderModule } from './header/header.module';
+import { LandingModule } from './landing/landing.module';
+import { RegisterModule } from './register/register.module';
+import { UtilModule } from './util/util.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,9 +34,12 @@ import { HeaderModule } from './header/header.module';
     ApolloModule,
     HttpLinkModule,
     AuthModule,
-    CommonModule,
+    UtilModule,
     HeaderModule,
-    ErrorModule
+    ErrorModule,
+    LandingModule,
+    RegisterModule,
+    CommonModule,
   ],
   providers: [MDBSpinningPreloader, ToastService],
   bootstrap: [AppComponent],

@@ -1,38 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { JwtHelperService } from '@auth0/angular-jwt';
-import { transformAndValidate } from 'class-transformer-validator';
-import { Token } from '../common/entities/token.entity';
+import { Router } from '@angular/router';
+import { Token } from '../util/entities/token.entity';
+import { TokenService } from '../util/services/token.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   isLoggedIn: boolean = false;
   token: Token;
 
-  constructor() { }
+  constructor(private readonly router: Router, private readonly tokenService: TokenService) {}
 
   async ngOnInit(): Promise<void> {
-    console.log('Init called!');
-    await this.getToken();
+    this.isLoggedIn = await this.tokenService.checkLoggedIn();
   }
 
-  async getToken() {
-    const localTokenStr = localStorage.getItem('token');
-    if(localTokenStr) {
-      try {
-        this.token = <Token> await transformAndValidate(Token, new JwtHelperService().decodeToken(localTokenStr));
-        if(this.token) {
-          this.isLoggedIn = true;
-        }
-      }
-      catch(e) {
-        this.isLoggedIn = false;
-      }
+  async logout() {
+    localStorage.removeItem('token');
+
+    if (window.location.pathname == '/') {
+      window.location.reload();
+    } else {
+      await this.router.navigate(['']);
     }
   }
-
 }

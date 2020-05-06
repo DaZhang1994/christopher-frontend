@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Narrow");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Narrow');
 body {
   overflow: hidden;
   font-family: 'Open Sans', sans-serif;
@@ -7,9 +7,9 @@ body {
 .not-found {
   position: relative;
   overflow: hidden;
-  height: 92.5vh;
+  height: 100vh;
 }
-.not-found [class*="wave"] {
+.not-found [class*='wave'] {
   position: absolute;
 }
 .not-found div {
@@ -43,7 +43,7 @@ body {
   background: url(http://res.cloudinary.com/andrewhani/image/upload/v1524821915/404/bg-1_gvybzk.svg);
   height: 100%;
 }
-.not-found div[class*="wave"]:not(.wave-4) {
+.not-found div[class*='wave']:not(.wave-4) {
   height: calc(100% - 250px);
 }
 .not-found div.wave-4 {

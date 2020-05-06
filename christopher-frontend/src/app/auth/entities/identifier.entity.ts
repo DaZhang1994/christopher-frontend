@@ -1,8 +1,7 @@
 import { IsEmail, IsOptional, IsPhoneNumber, IsString, Matches } from 'class-validator';
-import { BaseEntity } from '../../common/entities/base.entity';
+import { BaseEntity } from '../../util/entities/base.entity';
 
 export class Identifier extends BaseEntity {
-
   @Matches(/^[A-Za-z_]\w{5,15}$/)
   @IsString()
   @IsOptional()

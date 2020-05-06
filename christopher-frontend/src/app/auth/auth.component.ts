@@ -7,6 +7,7 @@ import HmacSHA256 from 'crypto-js/hmac-sha256';
 import gql from 'graphql-tag';
 import md5 from 'md5';
 import validator from 'validator';
+import { TokenService } from '../util/services/token.service';
 import { Identifier } from './entities/identifier.entity';
 
 gql`
@@ -20,7 +21,6 @@ gql`
   type Query {
     loginToken(identifier: IdentifierInput!): String!
     token(identifier: IdentifierInput!, password: String!): String!
-    user: User!
   }
 `;
 
@@ -39,7 +39,7 @@ const Token = gql`
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.sass'],
+  styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
   loginForm: FormGroup;
@@ -59,11 +59,16 @@ export class AuthComponent implements OnInit {
   };
   unauthorized: boolean;
 
-  constructor(private formBuilder: FormBuilder, private apollo: Apollo, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private apollo: Apollo,
+    private router: Router,
+    private readonly tokenService: TokenService
+  ) {
     this.loginForm = this.formBuilder.group({
-      identifier: ['', [Validators.required, this.identifierValidator]],
+      identifier: [null, [Validators.required, this.identifierValidator]],
       password: [
-        '',
+        null,
         [
           Validators.required,
           Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W)[a-zA-Z0-9\S]{8,16}$/),
@@ -79,7 +84,12 @@ export class AuthComponent implements OnInit {
     return this.loginForm.get('password');
   }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    if (await this.tokenService.checkLoggedIn()) {
+      await this.router.navigate(['']);
+      return;
+    }
+
     this.loginForm.valueChanges.subscribe(() => {
       if (this.unauthorized) {
         this.unauthorized = false;
@@ -127,8 +137,7 @@ export class AuthComponent implements OnInit {
       localStorage.setItem('token', tokenRes.token);
       this.loginForm.reset();
       return this.router.navigate(['']);
-    }
-    catch (e) {
+    } catch (e) {
       this.unauthorized = true;
     }
   }

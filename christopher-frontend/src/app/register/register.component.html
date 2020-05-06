@@ -1,0 +1,205 @@
+<div class="view intro-2">
+  <div class="full-bg-img">
+    <div class="mask rgba-purple-light flex-center">
+      <div class="container text-center" style="max-width: 450px; margin-top: 60px;">
+        <!-- Material form login -->
+        <!-- Material form register -->
+        <mdb-card>
+          <mdb-card-header class="info-color white-text text-center py-4">
+            <h5>
+              <strong>Sign up</strong>
+            </h5>
+          </mdb-card-header>
+
+          <!--Card content-->
+          <mdb-card-body class="px-lg-5 pt-0">
+            <!-- Form -->
+            <form
+              class="text-center"
+              style="color: #757575;"
+              [formGroup]="registerForm"
+              (ngSubmit)="onRegister(registerForm.value)"
+            >
+              <div class="form-row">
+                <div class="col">
+                  <!-- First name -->
+                  <div class="md-form">
+                    <input
+                      type="text"
+                      id="firstNameInput"
+                      class="form-control"
+                      formControlName="firstName"
+                      mdbInput
+                      mdbValidate
+                    />
+                    <label for="firstNameInput">First name</label>
+                    <mdb-error *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                      >Invalid first name</mdb-error
+                    >
+                    <mdb-success
+                      *ngIf="firstName.valid && (firstName.dirty || firstName.touched)"
+                    ></mdb-success>
+                  </div>
+                </div>
+                <div class="col">
+                  <!-- Last name -->
+                  <div class="md-form">
+                    <input
+                      type="text"
+                      id="lastNameInput"
+                      class="form-control"
+                      formControlName="lastName"
+                      mdbInput
+                      mdbValidate
+                    />
+                    <label for="lastNameInput">Last name</label>
+                    <mdb-error *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+                      >Invalid last name</mdb-error
+                    >
+                    <mdb-success
+                      *ngIf="lastName.valid && (lastName.dirty || lastName.touched)"
+                    ></mdb-success>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Username -->
+              <div class="md-form mt-0">
+                <input
+                  type="text"
+                  id="usernameInput"
+                  class="form-control"
+                  formControlName="username"
+                  mdbInput
+                  mdbValidate
+                />
+                <label for="usernameInput">Username</label>
+                <mdb-error *ngIf="username.invalid && (username.dirty || username.touched)"
+                  >Invalid username</mdb-error
+                >
+                <mdb-success
+                  *ngIf="username.valid && (username.dirty || username.touched)"
+                ></mdb-success>
+              </div>
+
+              <!-- E-mail -->
+              <div class="md-form mt-0">
+                <input
+                  type="email"
+                  id="emailInput"
+                  class="form-control"
+                  formControlName="email"
+                  mdbInput
+                  mdbValidate
+                />
+                <label for="emailInput">E-mail</label>
+                <mdb-error *ngIf="email.invalid && (email.dirty || email.touched)"
+                  >Invalid email</mdb-error
+                >
+                <mdb-success *ngIf="email.valid && (email.dirty || email.touched)"></mdb-success>
+              </div>
+
+              <!-- Password -->
+              <div class="md-form">
+                <input
+                  type="password"
+                  id="passwordInput"
+                  class="form-control"
+                  formControlName="password"
+                  aria-describedby="materialRegisterFormPasswordHelpBlock"
+                  mdbInput
+                  mdbValidate
+                />
+                <label for="passwordInput">Password</label>
+                <mdb-error *ngIf="password.invalid && (password.dirty || password.touched)"
+                  >Invalid password</mdb-error
+                >
+                <mdb-success
+                  *ngIf="password.valid && (password.dirty || password.touched)"
+                ></mdb-success>
+              </div>
+
+              <!-- Retype Password -->
+              <div class="md-form">
+                <input
+                  type="password"
+                  id="rePasswordInput"
+                  class="form-control"
+                  formControlName="rePassword"
+                  aria-describedby="materialRegisterFormPasswordHelpBlock"
+                  mdbInput
+                  mdbValidate
+                />
+                <label for="rePasswordInput">Retype password</label>
+                <mdb-error *ngIf="rePassword.invalid && (rePassword.dirty || rePassword.touched)"
+                  >Password mismatch</mdb-error
+                >
+                <mdb-success
+                  *ngIf="rePassword.valid && (rePassword.dirty || rePassword.touched)"
+                ></mdb-success>
+              </div>
+
+              <!-- Phone number -->
+              <div class="md-form">
+                <input
+                  type="text"
+                  id="telephoneInput"
+                  class="form-control"
+                  formControlName="telephone"
+                  aria-describedby="materialRegisterFormPhoneHelpBlock"
+                  mdbInput
+                  mdbValidate
+                />
+                <label for="telephoneInput">Phone number (optional)</label>
+                <mdb-error *ngIf="telephone.invalid && (telephone.dirty || telephone.touched)"
+                  >Invalid telephone number</mdb-error
+                >
+                <mdb-success
+                  *ngIf="telephone.valid && (telephone.dirty || telephone.touched)"
+                ></mdb-success>
+                <mdb-error *ngIf="registerFailed"
+                  >Register failed, please refresh and try again</mdb-error
+                >
+              </div>
+
+              <!-- Sign up button -->
+              <button
+                [disabled]="
+                  !(
+                    firstName.valid &&
+                    lastName.valid &&
+                    email.valid &&
+                    password.valid &&
+                    rePassword.valid &&
+                    telephone.valid
+                  )
+                "
+                mdbBtn
+                color="info"
+                outline="true"
+                rounded="true"
+                block="true"
+                class="my-4 waves-effect z-depth-0"
+                mdbWavesEffect
+                type="submit"
+              >
+                Sign up
+              </button>
+
+              <hr />
+
+              <p>
+                Already have an account?
+                <a [routerLink]="['/login']">Login</a>
+              </p>
+            </form>
+            <!-- Form -->
+          </mdb-card-body>
+        </mdb-card>
+        <!-- Material form register -->
+      </div>
+      <!-- Central div -->
+    </div>
+  </div>
+</div>
+<!-- Central div -->
