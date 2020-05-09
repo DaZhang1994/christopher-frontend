@@ -5,7 +5,7 @@
     <div class="view vw-100 vh-100">
       <img
         class="d-block vw-100 vh-100"
-        src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+        src="assets/img/slide1.jpg"
         alt="First slide"
       />
       <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
@@ -22,7 +22,7 @@
     <div class="view vw-100 vh-100">
       <img
         class="d-block vw-100 vh-100"
-        src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+        src="assets/img/slide2.jpg"
         alt="Second slide"
       />
       <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
@@ -39,7 +39,7 @@
     <div class="view vw-100 vh-100">
       <img
         class="d-block vw-100 vh-100"
-        src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+        src="assets/img/slide3.jpg"
         alt="Third slide"
       />
       <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
@@ -54,7 +54,7 @@
 <!--/Carousel Wrapper-->
 
 <!--Thread Section Wrapper-->
-<div style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img(115).jpg');">
+<div id="threads" style="background-image: url('/assets/img/streak.jpg');">
   <!--Thread Section Title-->
   <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
@@ -64,269 +64,252 @@
     </div>
   </div>
   <!--/Thread Section Title-->
-
-  <!--Thread Row 1-->
-  <div class="row">
-    <!--Thread 1-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(95).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
+  <div id="flippingThreadCards" (mousemove)="checkAndToggleCards($event.target)" (mouseenter)="toggleCards()" (mouseleave)="toggleCards()">
+    <!--Thread Row 1-->
+    <div class="row">
+      <!--Thread 1-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
               <img
-                   class="img-fluid z-depth-1"
-                   src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(95).jpg"
-                   alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 1-->
-
-    <!--Thread 2-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(96).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(96).jpg"
+                src="assets/img/thread1.jpg"
                 alt="img"
               />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread1.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
               </div>
             </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 2-->
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 1-->
 
-    <!--Thread 3-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(132).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
+      <!--Thread 2-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
               <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(132).jpg"
+                src="assets/img/thread2.jpg"
                 alt="img"
               />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread2.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
               </div>
             </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 2-->
+
+      <!--Thread 3-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread3.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread3.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--Thread 3-->
     </div>
-    <!--Thread 3-->
+    <!--Thread Row 1-->
+
+    <!--Thread Row 2-->
+    <div class="row">
+      <!--Thread 4-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread4.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread4.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 4-->
+
+      <!--Thread 5-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread5.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread5.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 5-->
+
+      <!--Thread 6-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread6.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread6.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 6-->
+    </div>
+    <!--/Thread Row 2-->
+
+    <!--Thread Row 3-->
+    <div class="row">
+      <!--Thread 7-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread7.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back" >
+              <div class="view">
+                <img
+                  src="assets/img/thread7.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 7-->
+
+      <!--Thread 8-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread8.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread8.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--/Thread 8-->
+
+      <!--Thread 9-->
+      <div class="col">
+        <a>
+          <mdb-flipping-card>
+            <div class="face front tp-box_side tp-box_front">
+              <img
+                src="assets/img/thread9.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <div class="view">
+                <img
+                  src="assets/img/thread9.jpg"
+                  alt="img"
+                />
+                <div class="mask flex-center rgba-black-strong">
+                  <p class="white-text">Strong mask</p>
+                </div>
+              </div>
+            </div>
+          </mdb-flipping-card>
+        </a>
+      </div>
+      <!--Thread 9-->
+    </div>
+    <!--/Thread Row 3-->
   </div>
-  <!--Thread Row 1-->
-
-  <!--Thread Row 2-->
-  <div class="row">
-    <!--Thread 4-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(129).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(129).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 4-->
-
-    <!--Thread 5-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(97).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(97).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 5-->
-
-    <!--Thread 6-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(94).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(94).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 6-->
-  </div>
-  <!--/Thread Row 2-->
-
-  <!--Thread Row 3-->
-  <div class="row">
-    <!--Thread 7-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back" >
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 7-->
-
-    <!--Thread 8-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--/Thread 8-->
-
-    <!--Thread 9-->
-    <div class="col">
-      <a>
-        <mdb-flipping-card>
-          <div class="face front tp-box_side tp-box_front">
-            <img
-              class="img-fluid z-depth-1"
-              src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg"
-              alt="img"
-            />
-          </div>
-          <div class="back tp-box_side tp-box_back">
-            <div class="view">
-              <img
-                class="img-fluid z-depth-1"
-                src="https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg"
-                alt="img"
-              />
-              <div class="mask flex-center rgba-black-strong">
-                <p class="white-text">Strong mask</p>
-              </div>
-            </div>
-          </div>
-        </mdb-flipping-card>
-      </a>
-    </div>
-    <!--Thread 9-->
-  </div>
-  <!--/Thread Row 3-->
 </div>
 <!--/Thread Section Wrapper-->

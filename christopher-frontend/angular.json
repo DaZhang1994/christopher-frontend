@@ -31,15 +31,14 @@
               "projects/ng-uikit-pro-standard/src/lib/assets/scss/bootstrap/bootstrap.scss",
               "projects/ng-uikit-pro-standard/src/lib/assets/scss/mdb.scss",
               "node_modules/animate.css/animate.css",
-              "src/styles.scss",
-              "src/assets/css/nav.scss",
-              "src/assets/css/flip-card.scss"
+              "src/styles.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/easy-pie-chart/dist/easypiechart.js",
               "node_modules/screenfull/dist/screenfull.js",
-              "node_modules/hammerjs/hammer.min.js"
+              "node_modules/hammerjs/hammer.min.js",
+              "node_modules/jquery/dist/jquery.js"
             ]
           },
           "configurations": {
