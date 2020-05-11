@@ -39,9 +39,10 @@ import { UtilModule } from './util/util.module';
     ErrorModule,
     LandingModule,
     RegisterModule,
-    CommonModule,
+    CommonModule
   ],
   providers: [MDBSpinningPreloader, ToastService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+
+export class AppModule { }

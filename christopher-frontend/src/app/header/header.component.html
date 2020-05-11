@@ -4,21 +4,18 @@
     [containerInside]="false"
   >
     <mdb-navbar-brand>
-      <a class="logo navbar-brand" [routerLink]="['/']">
+      <a class="logo navbar-brand" routerLink="/">
         <strong>Christopher</strong>
       </a>
     </mdb-navbar-brand>
 
     <links>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active waves-light" mdbWavesEffect>
-          <a class="nav-link" [routerLink]="['/']"
-            >Home
-            <span class="sr-only">(current)</span>
-          </a>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link" routerLink="/" >Home</a>
         </li>
         <li class="nav-item waves-light" mdbWavesEffect>
-          <a class="nav-link">Link</a>
+          <a class="nav-link" routerLink="/" fragment="threads" >Threads</a>
         </li>
         <li class="nav-item waves-light" mdbWavesEffect>
           <a class="nav-link">Profile</a>
@@ -27,7 +24,7 @@
 
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li *ngIf="!isLoggedIn" class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/login']">Login</a>
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/login">Login</a>
         </li>
         <li *ngIf="isLoggedIn" class="nav-item avatar dropdown" dropdown>
           <a
