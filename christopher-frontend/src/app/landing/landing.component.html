@@ -54,7 +54,7 @@
 <!--/Carousel Wrapper-->
 
 <!--Thread Section Wrapper-->
-<div id="threads" style="background-image: url('/assets/img/streak.jpg');">
+<div id="threads" style="background-image: url('assets/img/thread_streak.jpg');">
   <!--Thread Section Title-->
   <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
@@ -63,6 +63,7 @@
       </ul>
     </div>
   </div>
+
   <!--/Thread Section Title-->
   <div id="flippingThreadCards" (mousemove)="checkAndToggleCards($event.target)" (mouseenter)="toggleCards()" (mouseleave)="toggleCards()">
     <!--Thread Row 1-->
@@ -313,3 +314,43 @@
   </div>
 </div>
 <!--/Thread Section Wrapper-->
+
+<!--Post Section Wrapper-->
+<div id="posts" style="background-image: url('assets/img/post_streak.jpg');">
+  <!--Post Section Title-->
+  <div class="streak streak-sm streak-photo">
+    <div class="flex-center white-text rgba-black-light">
+      <ul class="list-unstyled">
+        <li><h1 class="h1-responsive">Think. Listen. Talk.</h1></li>
+      </ul>
+    </div>
+  </div>
+  <!--/Post Section Title-->
+
+  <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let item of postSlides; let i = index">
+      <div class="col-md-4 pb-2" *ngFor="let card of item; let cardIndex = index">
+        <mdb-card class="my-1 h-100">
+          <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+          <mdb-card-body>
+            <mdb-card-title>
+              <h4>{{ card.title }}</h4>
+            </mdb-card-title>
+            <p>{{ card.description }}</p>
+          </mdb-card-body>
+          <mdb-card-footer>
+            <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{ card.buttonText }}</a>
+          </mdb-card-footer>
+        </mdb-card>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+</div>
+<!--/Post Section Wrapper-->
+
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
