@@ -54,264 +54,163 @@
 <!--/Carousel Wrapper-->
 
 <!--Thread Section Wrapper-->
-<div id="threads" style="background-image: url('assets/img/thread_streak.jpg');">
+<div id="threads">
+
   <!--Thread Section Title-->
-  <div class="streak streak-sm streak-photo">
+  <div class="streak streak-sm streak-photo"  style="background-image: url('assets/img/thread_streak.jpg');">
     <div class="flex-center white-text rgba-black-light">
       <ul class="list-unstyled">
         <li><h1 class="h1-responsive">Share. Learn. Enjoy.</h1></li>
       </ul>
     </div>
   </div>
-
   <!--/Thread Section Title-->
-  <div id="flippingThreadCards" (mousemove)="checkAndToggleCards($event.target)" (mouseenter)="toggleCards()" (mouseleave)="toggleCards()">
-    <!--Thread Row 1-->
-    <div class="row">
-      <!--Thread 1-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread1.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread1.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 1-->
 
-      <!--Thread 2-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread2.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread2.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 2-->
-
-      <!--Thread 3-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread3.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread3.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--Thread 3-->
+  <!-- Thread Row 1 -->
+  <div class="row">
+    <!-- Thread 1 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+            class="img-fluid"
+            src="assets/img/thread1.jpg"
+            alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
     </div>
-    <!--Thread Row 1-->
+    <!-- /Thread 1 -->
 
-    <!--Thread Row 2-->
-    <div class="row">
-      <!--Thread 4-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread4.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread4.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 4-->
-
-      <!--Thread 5-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread5.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread5.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 5-->
-
-      <!--Thread 6-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread6.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread6.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 6-->
+    <!-- Thread 2 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread2.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
     </div>
-    <!--/Thread Row 2-->
+    <!-- /Thread 2 -->
 
-    <!--Thread Row 3-->
-    <div class="row">
-      <!--Thread 7-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread7.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back" >
-              <div class="view">
-                <img
-                  src="assets/img/thread7.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 7-->
-
-      <!--Thread 8-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread8.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread8.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--/Thread 8-->
-
-      <!--Thread 9-->
-      <div class="col">
-        <a>
-          <mdb-flipping-card>
-            <div class="face front tp-box_side tp-box_front">
-              <img
-                src="assets/img/thread9.jpg"
-                alt="img"
-              />
-            </div>
-            <div class="back tp-box_side tp-box_back">
-              <div class="view">
-                <img
-                  src="assets/img/thread9.jpg"
-                  alt="img"
-                />
-                <div class="mask flex-center rgba-black-strong">
-                  <p class="white-text">Strong mask</p>
-                </div>
-              </div>
-            </div>
-          </mdb-flipping-card>
-        </a>
-      </div>
-      <!--Thread 9-->
+    <!-- Thread 3 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread3.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
     </div>
-    <!--/Thread Row 3-->
   </div>
+  <!-- /Thread 3 -->
+
+  <!-- Thread Row 2 -->
+  <div class="row">
+    <!-- Thread 4 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread4.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 4 -->
+
+    <!-- Thread 5 -->
+    <div class="col view overlay">
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread5.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 5 -->
+
+    <!-- Thread 6 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread6.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 6 -->
+  </div>
+  <!-- /Thread Row 2 -->
+
+  <!-- Thread Row 3 -->
+  <div class="row">
+    <!-- Thread 7 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread7.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 7 -->
+
+    <!-- Thread 8 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread8.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 8 -->
+
+    <!-- Thread 9 -->
+    <div class="col view overlay" mdbWavesEffect>
+      <a>
+        <img
+          class="img-fluid"
+          src="assets/img/thread9.jpg"
+          alt="img"
+        />
+        <div class="mask waves-effect waves-light flex-center rgba-grey-strong">
+          <p class="white-text">Strong overlay</p>
+        </div>
+      </a>
+    </div>
+    <!-- /Thread 9 -->
+  </div>
+  <!-- /Thread Row 3 -->
 </div>
 <!--/Thread Section Wrapper-->
 
@@ -321,7 +220,7 @@
   <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
       <ul class="list-unstyled">
-        <li><h1 class="h1-responsive">Think. Listen. Talk.</h1></li>
+        <li><h1 class="h1-responsive">Think. Listen. Discuss.</h1></li>
       </ul>
     </div>
   </div>
@@ -348,9 +247,119 @@
 </div>
 <!--/Post Section Wrapper-->
 
+
+
+<!-- People Section Wrapper-->
+<div id="people" style="background-image: url('assets/img/people_streak.jpg');">
+  <!--People Section Title-->
+  <div class="streak streak-sm streak-photo">
+    <div class="flex-center white-text rgba-black-light">
+      <ul class="list-unstyled">
+        <li><h1 class="h1-responsive">Meet. Know. Join.</h1></li>
+      </ul>
+    </div>
+  </div>
+  <!--/People Section Title-->
+
+    <div class="row">
+
+      <!--Grid column-->
+      <div #like id="like" class="col view">
+        <div *ngIf="startedDrag" class="mask rgba-grey-strong waves-light" mdbWavesEffect>
+          <p class="white-text flex-center">Drop here to follow this guy~</p>
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div id="personCard" #personCard class="col-3" cdkDrag (cdkDragStarted)="onDrag($event)" (cdkDragEnded)="endDrag($event)" style="margin-top: 25px !important;">
+          <mdb-flipping-card #cards1>
+            <div class="face front tp-box_side tp-box_front" >
+              <!-- Image-->
+              <div class="card-up">
+                <img src="assets/img/people_card_up.jpg" class="img-fluid">
+              </div>
+              <!--Avatar-->
+              <div class="avatar">
+                <img src="assets/img/people_avatar.jpg" class="rounded-circle">
+              </div>
+              <!--Content-->
+              <div class="card-body">
+                <h4>Maria Kate</h4>
+                <p>Photographer</p>
+                <!--Triggering button-->
+                <a class="rotate-btn" data-card="card-1" (click)="cards1.toggle()">
+                  <mdb-icon fas icon="redo"></mdb-icon> Click here to rotate</a>
+              </div>
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <!--Content-->
+              <h4>About me</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis
+                rem
+                amet repellat, dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum,
+                officia
+                laudantium quaerat?
+              </p>
+              <hr>
+              <!--Social Icons-->
+              <ul class="list-inline list-unstyled">
+                <li class="list-inline-item">
+                  <a class="icons-sm fb-ic">
+                    <mdb-icon fab icon="facebook-f"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm pin-ic">
+                    <mdb-icon fab icon="pinterest"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm ins-ic">
+                    <mdb-icon fab icon="instagram"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm tw-ic">
+                    <mdb-icon fab icon="twitter"></mdb-icon>
+                  </a>
+                </li>
+              </ul>
+              <!--Triggering button-->
+              <a class="rotate-btn" data-card="card-1" (click)="cards1.toggle()">
+                <mdb-icon fas icon="undo"></mdb-icon> Click here to rotate back</a>
+            </div>
+          </mdb-flipping-card>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div #next id="next" class="col view">
+        <div *ngIf="startedDrag" class="mask rgba-grey-strong waves-light" mdbWavesEffect>
+          <p class="white-text flex-center">Drop here view next guy~</p>
+        </div>
+      </div>
+      <!--Grid column-->
+
+    </div>
+
+
+</div>
+<!--/People Section Wrapper-->
 <div style="height: 1000px">AAAAAAAA</div>
 <div style="height: 1000px">AAAAAAAA</div>
 <div style="height: 1000px">AAAAAAAA</div>
 <div style="height: 1000px">AAAAAAAA</div>
 <div style="height: 1000px">AAAAAAAA</div>
 <div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+<div style="height: 1000px">AAAAAAAA</div>
+
+

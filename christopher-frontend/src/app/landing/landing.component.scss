@@ -8,45 +8,24 @@
   height: 20vh;
 }
 
-.streak.streak-photo {
-  background-attachment: fixed;
-}
-
-/* Thread Flipping Cards */
+/* Thread Grid */
 #threads .row {
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
-  height: 40vh;
 }
 
 #threads .col {
-  padding: 0;
-  margin: 0;
-}
-
-#threads .back .view {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
-}
-
-#threads .back .view :hover {
-  cursor: pointer;
-}
-
-#threads img{
-  width: 100%;
-  height: 100%;
-  object-fit:cover;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* Post Padding for Dot Indicators */
 #posts {
-  padding-bottom: 0.1px;
+  height: 1000px;
 }
 
 /* Post Carousel */
@@ -57,3 +36,35 @@
   }
 }
 
+/* People Grid */
+#people .row {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  height: 500px;
+}
+
+#people .col {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#people mdb-flipping-card {
+  cursor: move;
+  background-color: white
+}
+
+#people #like {
+  z-index: 0;
+}
+
+#people #next {
+  z-index: 0;
+}
+
+#people #personCard {
+  z-index: 1;
+}

@@ -1,5 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { CardRotatingComponent } from 'ng-uikit-pro-standard';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-landing',
@@ -75,42 +74,23 @@ export class LandingComponent implements OnInit {
     return R;
   }
 
-  cardWrappers: any;
-  cardImage: any;
-  currHoveredElement: any;
+  @ViewChild('like')
+  like: any;
 
-  @ViewChildren(CardRotatingComponent)
-  threadCards: QueryList<CardRotatingComponent>;
+  @ViewChild('next')
+  next: any;
 
-  constructor(private el: ElementRef) {
-
-  }
+  startedDrag: boolean = false;
 
   ngOnInit(): void {
-    this.cardWrappers = this.el.nativeElement.querySelectorAll('.card-wrapper');
-    this.cardImage = this.el.nativeElement.querySelector('.img-fluid');
-
     this.postSlides = this.chunk(this.postCards, 3);
   }
 
-  toggleCards() {
-    if(this.threadCards){
-      this.threadCards.forEach((card: any) => {
-        if(card.rotate && !card._cdRef._cdRefInjectingView[0].matches(':hover')) {
-          card.toggle();
-        }
-        else if(!card.rotate && card._cdRef._cdRefInjectingView[0].matches(':hover')) {
-          card.toggle();
-        }
-      });
-    }
+  onDrag(_event: any) {
+    this.startedDrag = true;
   }
 
-  checkAndToggleCards(target: any) {
-    if(this.currHoveredElement != target) {
-      this.currHoveredElement = target;
-      this.toggleCards();
-    }
+  endDrag(_$event: any) {
+    this.startedDrag = false;
   }
-
 }

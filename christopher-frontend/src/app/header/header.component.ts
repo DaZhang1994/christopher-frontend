@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngAfterViewInit(): void {
 
     this.route.fragment.subscribe((fragment) => {
+
       try {
         if(fragment) {
           this.el.nativeElement.querySelector(`#${fragment}`).scrollIntoView({ behavior: 'smooth' });
