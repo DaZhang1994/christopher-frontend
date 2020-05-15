@@ -1,7 +1,7 @@
 <div class="view intro-2">
   <div class="full-bg-img">
     <div class="mask rgba-purple-light flex-center">
-      <div class="container text-center" style="max-width: 450px;">
+      <div class="container text-center">
         <!-- Material form login -->
         <mdb-card>
           <mdb-card-header class="info-color white-text text-center py-4">
@@ -15,7 +15,6 @@
             <!-- Login Form -->
             <form
               class="text-center"
-              style="color: #757575;"
               [formGroup]="loginForm"
               (ngSubmit)="onLogin(loginForm.value)"
             >

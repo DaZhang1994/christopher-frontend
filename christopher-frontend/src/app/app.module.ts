@@ -17,6 +17,7 @@ import { GraphQLModule } from './graphql.module';
 import { HeaderModule } from './header/header.module';
 import { LandingModule } from './landing/landing.module';
 import { RegisterModule } from './register/register.module';
+import { ThreadModule } from './thread/thread.module';
 import { UtilModule } from './util/util.module';
 
 @NgModule({
@@ -39,7 +40,8 @@ import { UtilModule } from './util/util.module';
     ErrorModule,
     LandingModule,
     RegisterModule,
-    CommonModule
+    CommonModule,
+    ThreadModule
   ],
   providers: [MDBSpinningPreloader, ToastService],
   bootstrap: [AppComponent],
