@@ -3,9 +3,14 @@
   bottom: 40%;
 }
 
-/* Streak */
+/* Streaks for All Sections */
 .streak {
   height: 20vh;
+}
+
+/* Thread Streak Background */
+#threads .streak {
+  background: url('src/assets/img/thread_streak.jpg') no-repeat fixed center;
 }
 
 /* Thread Grid */
@@ -23,9 +28,21 @@
   margin-right: 0;
 }
 
-/* Post Padding for Dot Indicators */
+/* Post Section Height for PCs */
 #posts {
-  height: 1000px;
+  height: 950px;
+}
+
+/* Post Section Height for Mobile Devices */
+@media screen and (max-width: 767px) {
+  #posts {
+    height: 2600px;
+  }
+}
+
+/* Post Background */
+#posts {
+  background: url('src/assets/img/post_streak.jpg') no-repeat fixed center;
 }
 
 /* Post Carousel */
@@ -52,19 +69,30 @@
   margin-right: 0;
 }
 
+/* People Background */
+#people {
+  background: url('src/assets/img/people_streak.jpg') no-repeat fixed center;
+}
+
+/* People Flipping Card */
 #people mdb-flipping-card {
   cursor: move;
   background-color: white
 }
 
+/* People Follow Div */
 #people #follow {
   z-index: 0;
+  margin-right: 5vw
 }
 
+/* People Next Div */
 #people #next {
   z-index: 0;
+  margin-left: 5vw
 }
 
+/* People Flipping Card Div */
 #people #peopleCardWrapper1 {
   // 1 greater than 3 dot's z-index above
   z-index: 16;

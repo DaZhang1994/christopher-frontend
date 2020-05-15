@@ -57,7 +57,7 @@
 <div id="threads">
 
   <!--Thread Section Title-->
-  <div class="streak streak-sm streak-photo"  style="background-image: url('assets/img/thread_streak.jpg');">
+  <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
       <ul class="list-unstyled">
         <li><h1 class="h1-responsive">Share. Learn. Enjoy.</h1></li>
@@ -132,7 +132,7 @@
     <!-- /Thread 4 -->
 
     <!-- Thread 5 -->
-    <div class="col view overlay">
+    <div class="col view overlay" mdbWavesEffect>
       <a>
         <img
           class="img-fluid"
@@ -215,7 +215,7 @@
 <!--/Thread Section Wrapper-->
 
 <!--Post Section Wrapper-->
-<div id="posts" style="background-image: url('assets/img/post_streak.jpg');">
+<div id="posts" >
   <!--Post Section Title-->
   <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
@@ -248,7 +248,7 @@
 <!--/Post Section Wrapper-->
 
 <!-- People Section Wrapper-->
-<div id="people" style="background-image: url('assets/img/people_streak.jpg');">
+<div id="people">
   <!--People Section Title-->
   <div class="streak streak-sm streak-photo">
     <div class="flex-center white-text rgba-black-light">
@@ -262,7 +262,7 @@
   <!-- People Section Body-->
   <div class="row">
     <!-- Follow Dropping Div -->
-    <div #follow id="follow" class="col view" style="margin-right: 5vw">
+    <div #follow id="follow" class="col view">
       <div *ngIf="startedDrag && !hoverOnFollow" class="mask rgba-black-strong waves-light" mdbWavesEffect>
         <p class="white-text flex-center">Drop here to follow this guy~</p>
       </div>
@@ -337,7 +337,7 @@
     <!-- /People Card Wrapper -->
 
     <!-- Next Dropping Div -->
-    <div #next id="next" class="col view" style="margin-left: 5vw">
+    <div #next id="next" class="col view">
       <div *ngIf="startedDrag && !hoverOnNext" class="mask rgba-black-strong waves-light" mdbWavesEffect>
         <p class="white-text flex-center">Drop here view next guy~</p>
       </div>
