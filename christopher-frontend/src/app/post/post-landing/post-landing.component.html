@@ -1,0 +1,38 @@
+<!--Thread Section Wrapper-->
+<section id="post-landing" class="container-fluid">
+
+  <div class="header-placeholder"></div>
+
+  <mdb-card id="post-landing-content">
+    <mdb-card-header class="white-text text-center py-4">
+      <h1><strong>Listen. Think. Discuss.</strong></h1>
+    </mdb-card-header>
+
+    <mdb-card-body>
+      <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'" [animation]="'slide'">
+        <mdb-carousel-item *ngFor="let item of postSlides; let i = index">
+          <div class="col-md-4 pb-2" *ngFor="let card of item; let cardIndex = index">
+            <mdb-card class="my-1 h-100">
+              <a href="#">
+                <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+              </a>
+              <mdb-card-body>
+                <mdb-card-title>
+                  <h4>{{ card.title }}</h4>
+                </mdb-card-title>
+                <p>{{ card.description }}</p>
+              </mdb-card-body>
+              <mdb-card-footer>
+                <a href="#" mdbBtn color="primary" class="waves-light" mdbWavesEffect>{{ card.buttonText }}</a>
+              </mdb-card-footer>
+            </mdb-card>
+          </div>
+        </mdb-carousel-item>
+      </mdb-carousel>
+    </mdb-card-body>
+  </mdb-card>
+
+  <div class="footer-placeholder"></div>
+
+</section>
+<!--/Thread Section Wrapper-->

@@ -16,6 +16,8 @@ import { ErrorModule } from './error/error.module';
 import { GraphQLModule } from './graphql.module';
 import { HeaderModule } from './header/header.module';
 import { LandingModule } from './landing/landing.module';
+import { PeopleModule } from './people/people.module';
+import { PostModule } from './post/post.module';
 import { RegisterModule } from './register/register.module';
 import { ThreadModule } from './thread/thread.module';
 import { UtilModule } from './util/util.module';
@@ -41,7 +43,9 @@ import { UtilModule } from './util/util.module';
     LandingModule,
     RegisterModule,
     CommonModule,
-    ThreadModule
+    ThreadModule,
+    PostModule,
+    PeopleModule
   ],
   providers: [MDBSpinningPreloader, ToastService],
   bootstrap: [AppComponent],

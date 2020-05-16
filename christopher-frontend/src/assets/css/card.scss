@@ -1,6 +1,9 @@
 .card img {
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
+  border-radius: 4px !important;
+}
+
+.card .mask {
+  border-radius: 4px !important;
 }
 
 mdb-card-footer {

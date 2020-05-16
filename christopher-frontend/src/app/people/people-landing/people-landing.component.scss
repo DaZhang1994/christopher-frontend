@@ -1,0 +1,38 @@
+#people-landing {
+  background: url('src/assets/img/thread_bg.jpg') no-repeat fixed center;
+  background-size: cover;
+}
+
+#people-landing-content {
+  background: url('../../../assets/img/people_landing_content_bg.jpg') no-repeat  center;
+  background-size: cover;
+}
+
+.row {
+  height: 560px;
+}
+
+/* People Flipping Card */
+#people-landing-content mdb-flipping-card {
+  cursor: move;
+  background-color: white
+}
+
+/* People Follow Div */
+#people-landing-content #follow {
+  z-index: 0;
+  margin-right: 5vw
+}
+
+/* People Next Div */
+#people-landing-content #next {
+  z-index: 0;
+  margin-left: 5vw
+}
+
+/* People Flipping Card Div */
+#people-landing-content #peopleCardWrapper1 {
+  // 1 greater than 3 dot's z-index above
+  z-index: 16;
+  margin-top: 30px !important;
+}

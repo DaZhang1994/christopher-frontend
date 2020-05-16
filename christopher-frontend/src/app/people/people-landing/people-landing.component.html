@@ -1,0 +1,109 @@
+<!--Thread Section Wrapper-->
+<section id="people-landing" class="container-fluid">
+
+  <div class="header-placeholder"></div>
+
+  <mdb-card id="people-landing-content">
+    <mdb-card-header class="white-text text-center py-4">
+      <h1><strong>Meet. Know. Join.</strong></h1>
+    </mdb-card-header>
+
+    <mdb-card-body>
+
+      <!-- People Section Body-->
+      <div class="row">
+        <!-- Follow Dropping Div -->
+        <div #follow id="follow" class="col view">
+          <div *ngIf="startedDrag && !hoverOnFollow" class="mask rgba-black-strong waves-light" mdbWavesEffect>
+            <p class="white-text flex-center">Drop here to follow this guy~</p>
+          </div>
+          <div *ngIf="hoverOnFollow" class="mask rgba-grey-strong waves-light" mdbWavesEffect>
+            <p class="white-text flex-center">Drop here to follow this guy~</p>
+          </div>
+        </div>
+        <!-- /Follow Dropping Div -->
+
+        <!-- People Card Wrapper -->
+        <div id="peopleCardWrapper1" #peopleCardWrapper1 class="col-3" cdkDrag (cdkDragStarted)="onDrag($event)" (cdkDragMoved)="onDragMove($event)" (cdkDragEnded)="onEndDrag($event)">
+          <!-- People Flipping Card -->
+          <mdb-flipping-card #peopleCard1 (contextmenu)="onRightClickCard()">
+            <div class="face front tp-box_side tp-box_front" >
+              <!-- Image-->
+              <div class="card-up">
+                <img src="assets/img/people_card_up.jpg" class="img-fluid" alt="people-card-up-img">
+              </div>
+              <!--Avatar-->
+              <div class="avatar">
+                <img src="assets/img/people_avatar.jpg" class="rounded-circle" alt="people-card-avatar">
+              </div>
+              <!--Content-->
+              <div class="card-body">
+                <h4>Maria Kate</h4>
+                <p>Photographer</p>
+                <!-- Rotate Hint Icon -->
+                <mdb-icon fas icon="redo"></mdb-icon> Right click here to rotate
+              </div>
+            </div>
+            <div class="back tp-box_side tp-box_back">
+              <!--Content-->
+              <h4>About me</h4>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae, dolores dicta. Blanditiis
+                rem
+                amet repellat, dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum eum,
+                officia
+                laudantium quaerat?
+              </p>
+              <hr>
+              <!--Social Icons-->
+              <ul class="list-inline list-unstyled">
+                <li class="list-inline-item">
+                  <a class="icons-sm fb-ic">
+                    <mdb-icon fab icon="facebook-f"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm pin-ic">
+                    <mdb-icon fab icon="pinterest"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm ins-ic">
+                    <mdb-icon fab icon="instagram"></mdb-icon>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="icons-sm tw-ic">
+                    <mdb-icon fab icon="twitter"></mdb-icon>
+                  </a>
+                </li>
+              </ul>
+              <!-- Rotate Hint Icon -->
+              <mdb-icon fas icon="undo"></mdb-icon> Right click to rotate back
+              <!-- /Rotate Hint Icon -->
+            </div>
+          </mdb-flipping-card>
+          <!-- /People Flipping Card -->
+        </div>
+        <!-- /People Card Wrapper -->
+
+        <!-- Next Dropping Div -->
+        <div #next id="next" class="col view">
+          <div *ngIf="startedDrag && !hoverOnNext" class="mask rgba-black-strong waves-light" mdbWavesEffect>
+            <p class="white-text flex-center">Drop here view next guy~</p>
+          </div>
+          <div *ngIf="hoverOnNext" class="mask rgba-grey-strong waves-light" mdbWavesEffect>
+            <p class="white-text flex-center">Drop here to view next guy~</p>
+          </div>
+        </div>
+        <!-- /Next Dropping Div -->
+      </div>
+      <!-- People Section Body-->
+
+    </mdb-card-body>
+  </mdb-card>
+
+  <div class="footer-placeholder"></div>
+
+</section>
+<!--/Thread Section Wrapper-->

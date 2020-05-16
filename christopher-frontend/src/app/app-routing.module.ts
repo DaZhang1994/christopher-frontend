@@ -4,7 +4,13 @@ import { AuthComponent } from './auth/auth.component';
 import { PageNotFound } from './error/page_not_found/page_not_found.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingComponent } from './landing/landing.component';
+import { PeopleDetailComponent } from './people/people-detail/people-detail.component';
+import { PeopleLandingComponent } from './people/people-landing/people-landing.component';
+import { PostDetailComponent } from './post/post-detail/post-detail.component';
+import { PostLandingComponent } from './post/post-landing/post-landing.component';
 import { RegisterComponent } from './register/register.component';
+import { ThreadDetailComponent } from './thread/thread-detail/thread-detail.component';
+import { ThreadLandingComponent } from './thread/thread-landing/thread-landing.component';
 
 const routes: Routes = [
   {
@@ -14,6 +20,7 @@ const routes: Routes = [
       {
         path: '',
         component: LandingComponent,
+        pathMatch: 'full'
       },
     ],
   },
@@ -24,6 +31,7 @@ const routes: Routes = [
       {
         path: '',
         component: AuthComponent,
+        pathMatch: 'full'
       },
     ],
   },
@@ -34,6 +42,67 @@ const routes: Routes = [
       {
         path: '',
         component: RegisterComponent,
+        pathMatch: 'full'
+      },
+    ],
+  },
+  {
+    path: 'threads',
+    component: HeaderComponent,
+    children: [
+      {
+        path: '',
+        component: ThreadLandingComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: ':id',
+        component: ThreadDetailComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: '**',
+        component: PageNotFound,
+      },
+    ],
+  },
+  {
+    path: 'posts',
+    component: HeaderComponent,
+    children: [
+      {
+        path: '',
+        component: PostLandingComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: ':id',
+        component: PostDetailComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: '**',
+        component: PageNotFound,
+      },
+    ],
+  },
+  {
+    path: 'people',
+    component: HeaderComponent,
+    children: [
+      {
+        path: '',
+        component: PeopleLandingComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: ':id',
+        component: PeopleDetailComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: '**',
+        component: PageNotFound,
       },
     ],
   },
