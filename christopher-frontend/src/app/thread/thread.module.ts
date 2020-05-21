@@ -5,11 +5,10 @@ import { MDBBootstrapModulesPro } from '../../../projects/ng-uikit-pro-standard/
 import { UtilModule } from '../util/util.module';
 import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
 import { ThreadLandingComponent } from './thread-landing/thread-landing.component';
-import { ThreadListingComponent } from './thread-listing/thread-listing.component';
 import { ThreadComponent } from './thread.component';
 
 @NgModule({
-  declarations: [ThreadComponent, ThreadLandingComponent, ThreadListingComponent, ThreadDetailComponent],
+  declarations: [ThreadComponent, ThreadLandingComponent, ThreadDetailComponent],
   imports: [
     CommonModule,
     MDBBootstrapModulesPro.forRoot(),

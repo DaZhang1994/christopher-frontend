@@ -31,6 +31,8 @@
               "projects/ng-uikit-pro-standard/src/lib/assets/scss/bootstrap/bootstrap.scss",
               "projects/ng-uikit-pro-standard/src/lib/assets/scss/mdb.scss",
               "node_modules/animate.css/animate.css",
+              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.snow.css",
               "src/styles.scss"
             ],
             "scripts": [

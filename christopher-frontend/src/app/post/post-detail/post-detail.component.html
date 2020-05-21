@@ -1,1 +1,29 @@
-<p>post-detail works!</p>
+<!--Thread Section Wrapper-->
+<section id="post-detail" class="container-fluid">
+
+  <div class="header-placeholder"></div>
+
+  <mdb-card id="post-detail-content">
+    <mdb-card-header class="white-text text-center py-4">
+      <h1><strong>Post Title</strong></h1>
+      <h5>Author: Tom Hanks</h5>
+      <h5>Post Date: 05/16/2020</h5>
+    </mdb-card-header>
+
+    <mdb-card-body>
+
+      <form [formGroup]="editorForm" (ngSubmit)="onSubmit()" style="background-color: white">
+        <div class="form-group">
+          <label for="editor"><h3>Editor</h3></label>
+          <quill-editor id="editor" formControlName="editor" style="background-color: white"></quill-editor>
+        </div>
+
+      </form>
+
+    </mdb-card-body>
+  </mdb-card>
+
+  <div class="footer-placeholder"></div>
+
+</section>
+<!--/Thread Section Wrapper-->

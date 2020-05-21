@@ -7,6 +7,7 @@ import { LandingComponent } from './landing/landing.component';
 import { PeopleDetailComponent } from './people/people-detail/people-detail.component';
 import { PeopleLandingComponent } from './people/people-landing/people-landing.component';
 import { PostDetailComponent } from './post/post-detail/post-detail.component';
+import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { PostLandingComponent } from './post/post-landing/post-landing.component';
 import { RegisterComponent } from './register/register.component';
 import { ThreadDetailComponent } from './thread/thread-detail/thread-detail.component';
@@ -76,8 +77,13 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: ':id',
+        path: 'view/:id',
         component: PostDetailComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'edit/:id',
+        component: PostEditComponent,
         pathMatch: 'full'
       },
       {

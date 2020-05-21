@@ -6,6 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApolloModule } from 'apollo-angular';
 import { HttpLinkModule } from 'apollo-angular-link-http';
+import { MdbFileUploadModule } from 'mdb-file-upload';
+import { QuillModule } from 'ngx-quill';
 import { MDBBootstrapModulesPro } from '../../projects/ng-uikit-pro-standard/src/lib/mdb.module';
 import { ToastModule, ToastService } from '../../projects/ng-uikit-pro-standard/src/lib/pro/alerts';
 import { MDBSpinningPreloader } from '../../projects/ng-uikit-pro-standard/src/lib/pro/preloader';
@@ -25,6 +27,9 @@ import { UtilModule } from './util/util.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    QuillModule.forRoot({
+
+    }),
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModulesPro.forRoot(),
@@ -45,9 +50,12 @@ import { UtilModule } from './util/util.module';
     CommonModule,
     ThreadModule,
     PostModule,
-    PeopleModule
+    PeopleModule,
+    MdbFileUploadModule
   ],
-  providers: [MDBSpinningPreloader, ToastService],
+  providers: [
+    MDBSpinningPreloader,
+    ToastService],
   bootstrap: [AppComponent],
 })
 
