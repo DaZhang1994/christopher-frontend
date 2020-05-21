@@ -4,21 +4,15 @@
   <div class="header-placeholder"></div>
 
   <mdb-card id="post-detail-content">
-    <mdb-card-header class="white-text text-center py-4">
-      <h1><strong>Post Title</strong></h1>
-      <h5>Author: Tom Hanks</h5>
-      <h5>Post Date: 05/16/2020</h5>
+    <mdb-card-header class="text-center py-4">
+      <h1><strong>{{ this.post?.title }}</strong></h1>
+      <h5>Author: {{ this.post?.author.firstName + ' ' + this.post?.author.lastName }}</h5>
+      <h6>Post Date: {{ this.post?.createdTime | date }}</h6>
     </mdb-card-header>
 
     <mdb-card-body>
 
-      <form [formGroup]="editorForm" (ngSubmit)="onSubmit()" style="background-color: white">
-        <div class="form-group">
-          <label for="editor"><h3>Editor</h3></label>
-          <quill-editor id="editor" formControlName="editor" style="background-color: white"></quill-editor>
-        </div>
-
-      </form>
+      <quill-view [content]="this.post?.content" format="text" theme="snow"></quill-view>
 
     </mdb-card-body>
   </mdb-card>

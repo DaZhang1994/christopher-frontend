@@ -10,6 +10,7 @@ import { PostDetailComponent } from './post/post-detail/post-detail.component';
 import { PostEditComponent } from './post/post-edit/post-edit.component';
 import { PostLandingComponent } from './post/post-landing/post-landing.component';
 import { RegisterComponent } from './register/register.component';
+import { ComposePostComponent } from './thread/compose-post/compose-post.component';
 import { ThreadDetailComponent } from './thread/thread-detail/thread-detail.component';
 import { ThreadLandingComponent } from './thread/thread-landing/thread-landing.component';
 
@@ -57,8 +58,13 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: ':id',
+        path: 'view/:id',
         component: ThreadDetailComponent,
+        pathMatch: 'full'
+      },
+      {
+        path: 'compose/:id',
+        component: ComposePostComponent,
         pathMatch: 'full'
       },
       {

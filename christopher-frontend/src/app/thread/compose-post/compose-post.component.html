@@ -1,0 +1,29 @@
+<!--Thread Section Wrapper-->
+<section id="compose-post" class="container-fluid">
+
+  <div class="header-placeholder"></div>
+
+  <form [formGroup]="editPostForm" (ngSubmit)="onSubmit(editPostForm.value)">
+    <mdb-card id="compose-post-content">
+      <mdb-card-header class="rgba-white-slight mb-0 pb-0">
+        <mdb-file-upload #postFeatureImg ngDefaultControl id="postFeatureImg" formControlName="postFeatureImg" (fileRemoved)="onFileRemove()" (fileAdded)="onFileAdd($event)"></mdb-file-upload>
+        <div class="md-form">
+          <input mdbInput mdbValidate type="text" id="postTitle" class="form-control text-center" formControlName="postTitle">
+          <label for="postTitle">Post Title</label>
+          <mdb-error *ngIf="postTitle.invalid && (postTitle.dirty || postTitle.touched)">Please Enter Post Title</mdb-error>
+          <mdb-success *ngIf="postTitle.valid && (postTitle.dirty || postTitle.touched)"></mdb-success>
+        </div>
+      </mdb-card-header>
+
+      <mdb-card-body class="p-0">
+        <quill-editor formControlName="postContent" ></quill-editor>
+        <button id="cancelBtn" type="button" mdbBtn class="m-0 w-50 flex-1" color="grey" mdbWavesEffect>Cancel</button>
+        <button id="submitBtn" [disabled]="!postTitle.valid" type="submit" mdbBtn class="m-0 w-50 flex-1" color="primary" mdbWavesEffect>Submit</button>
+      </mdb-card-body>
+    </mdb-card>
+  </form>
+
+  <div class="footer-placeholder"></div>
+
+</section>
+<!--/Thread Section Wrapper-->
